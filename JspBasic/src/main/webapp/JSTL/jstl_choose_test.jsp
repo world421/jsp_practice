@@ -20,9 +20,8 @@
     --%>
 
  	<c:set var="score" value="${param.point}"/>
- 		# 점수 : ${score} <br>
- 		
- 		당신의 점수는 : <strong>${score} 점 </strong>
+ 				
+ 		** 당신의 점수는 : <strong>${score} 점 </strong>
  	
  	
  	<c:choose>
