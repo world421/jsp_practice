@@ -28,4 +28,31 @@ public class BoardRepository {
 	public List<BoardVO> getList(){
 		return boardList;
 	}
+	//글번호를 가지고 특정 게시물 객체를 리턴하는 메서드
+	public BoardVO getContent(int bId) {
+		return boardList.get(bId-1);
+	}
+	
+	//객 체를 수정하는 메서드 (수정된객체주고 번호도 주세요(
+	public void update(BoardVO vo, int bId) {
+		boardList.set(bId-1, vo);
+	}
+	
+	//객체를 삭제하는 메서드 
+	public void delete(int bId) {
+		boardList.remove(bId-1);
+	}
+	
+	public List<BoardVO> search(String keyword) {
+		List<BoardVO> searchList= new ArrayList<>();
+		for( BoardVO vo : boardList ) {
+			if(vo.getWriter().contains(keyword)) { //포함이되어있는지
+				searchList.add(vo);
+			}
+		}
+		
+		return searchList;
+	}
+	
+	
 }

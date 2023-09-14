@@ -13,7 +13,8 @@
 		<input type="text" name= "writer" placeholder="작성자"><br>
 		<input type="text" name= "title" placeholder="글제목"><br>
 		<textarea name = "content" rows="5" cols="30" placeholder="게시글 내용을 입력하세요"></textarea>
-		<button type="submit" onclick="return confirm('등록하시겠습니까?.')">등록</button>
+		<button type="submit" on
+		click="return confirm('등록하시겠습니까?')">등록</button>
 	</form>
 	
 </body>
